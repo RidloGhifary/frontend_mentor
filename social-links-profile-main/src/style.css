@@ -29,8 +29,8 @@ body {
 
 .container {
   background-color: var(--DarkGrey);
-  width: clamp(280px, 280px, 350px);
-  padding: 18px;
+  width: clamp(300px, 300px, 380px);
+  padding: 25px;
   border-radius: 15px;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
