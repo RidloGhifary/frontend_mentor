@@ -4,6 +4,7 @@ import RightSideStep1 from "./components/rightSide/RightSideStep1";
 import { useState } from "react";
 import RightSideStep2 from "./components/rightSide/RightSideStep2";
 import RightSideStep3 from "./components/rightSide/RightSideStep3";
+import RightSideStep4 from "./components/rightSide/RightSideStep4";
 
 function App() {
   const [step, setStep] = useState<number>(1);
@@ -28,6 +29,7 @@ function App() {
         {step === 1 && <RightSideStep1 setStep={setStep} />}
         {step === 2 && <RightSideStep2 setStep={setStep} />}
         {step === 3 && <RightSideStep3 setStep={setStep} />}
+        {step === 4 && <RightSideStep4 setStep={setStep} />}
       </div>
     </section>
   );

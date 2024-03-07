@@ -33,13 +33,13 @@ const RightSideStep3 = ({ setStep }: Props) => {
       </div>
       <div className="flex items-center  justify-between">
         <Button
-          onClick={() => setStep(1)}
+          onClick={() => setStep(2)}
           variant={"ghost"}
           className="text-gray-400"
         >
           Go back
         </Button>
-        <Button onClick={() => setStep(3)}>Next Step</Button>
+        <Button onClick={() => setStep(4)}>Next Step</Button>
       </div>
     </div>
   );
