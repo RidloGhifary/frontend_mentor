@@ -12,7 +12,11 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
-const RightSideStep1 = () => {
+type Props = {
+  setStep: (no: number) => void;
+};
+
+const RightSideStep1 = ({ setStep }: Props) => {
   const phoneRegex = new RegExp(
     /^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s]?[0-9])+$/,
   );
@@ -40,13 +44,15 @@ const RightSideStep1 = () => {
   const onSubmit = () => {};
 
   return (
-    <div className="col-span-2 px-16 py-8">
-      <h1 className="text-3xl font-bold text-[#02295a]">Personal info</h1>
-      <p className="mt-1 text-sm font-light text-gray-400">
-        Please provide your name, email, and phone number
-      </p>
+    <div className="col-span-2 flex flex-col justify-between px-16 py-8">
+      <div>
+        <h1 className="text-3xl font-bold text-[#02295a]">Personal info</h1>
+        <p className="mt-1 text-sm font-light text-gray-400">
+          Please provide your name, email, and phone number
+        </p>
+      </div>
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="mt-8">
+        <form onSubmit={form.handleSubmit(onSubmit)}>
           <FormField
             control={form.control}
             name="username"
@@ -105,7 +111,11 @@ const RightSideStep1 = () => {
             )}
           />
           <div className="flex items-end justify-end">
-            <Button type="submit" className="mt-10 bg-[#02295a] text-right">
+            <Button
+              onClick={() => setStep(2)}
+              type="submit"
+              className="mt-20 bg-[#02295a] text-right"
+            >
               Next Step
             </Button>
           </div>
