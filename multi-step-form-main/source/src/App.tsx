@@ -3,6 +3,7 @@ import Step from "./components/steps/Step";
 import RightSideStep1 from "./components/rightSide/RightSideStep1";
 import { useState } from "react";
 import RightSideStep2 from "./components/rightSide/RightSideStep2";
+import RightSideStep3 from "./components/rightSide/RightSideStep3";
 
 function App() {
   const [step, setStep] = useState<number>(1);
@@ -26,6 +27,7 @@ function App() {
         </div>
         {step === 1 && <RightSideStep1 setStep={setStep} />}
         {step === 2 && <RightSideStep2 setStep={setStep} />}
+        {step === 3 && <RightSideStep3 setStep={setStep} />}
       </div>
     </section>
   );

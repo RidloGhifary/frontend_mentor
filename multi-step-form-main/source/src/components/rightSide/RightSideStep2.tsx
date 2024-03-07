@@ -68,7 +68,7 @@ const RightSideStep2 = ({ setStep }: Props) => {
         >
           Go back
         </Button>
-        <Button onClick={() => setStep(2)}>Next Step</Button>
+        <Button onClick={() => setStep(3)}>Next Step</Button>
       </div>
     </div>
   );
