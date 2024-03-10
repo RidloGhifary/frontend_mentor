@@ -16,7 +16,7 @@ const SearchInput = ({
   selectedRegion,
 }: Props) => {
   return (
-    <div className="container mx-auto mb-10 flex max-w-[1200px] items-center justify-between p-3 md:p-0">
+    <div className="container mx-auto mb-10 flex max-w-[1200px] flex-wrap items-center justify-between gap-5 p-3 md:p-0">
       <div className="dark:bg-darkBlue flex items-center gap-3 rounded-md bg-white px-7 py-3 shadow-md">
         <label htmlFor="country">
           <IoSearch className="dark:text-white" />
