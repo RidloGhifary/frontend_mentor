@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Country from "../types/CountryType";
 
 interface Props {
@@ -7,7 +8,8 @@ interface Props {
 
 const CountryCard = ({ index, data }: Props) => {
   return (
-    <div
+    <Link
+      to={`/${data.name}`}
       className="dark:bg-darkBlue cursor-pointer overflow-hidden rounded-md shadow-md transition hover:scale-105"
       key={index}
     >
@@ -28,7 +30,7 @@ const CountryCard = ({ index, data }: Props) => {
           <b>Capital :</b> {data.capital || "Not found"}
         </p>
       </div>
-    </div>
+    </Link>
   );
 };
 
