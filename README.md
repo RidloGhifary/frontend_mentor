@@ -21,3 +21,6 @@ Here i will upload every challenges or project that i get from [frontend-mentor]
 - # [multi-step-form](https://frontend-mentor-one-tau.vercel.app/)
 
   https://github.com/RidloGhifary/frontend_mentor/assets/117726043/43c2f466-ba99-49d4-b85a-4f8e7d7e706a
+
+- # [rest-countries-api](https://rest-countries-rosy-sigma.vercel.app/)
+  ![Screen Shot 2024-03-10 at 18 35 18](https://github.com/RidloGhifary/frontend_mentor/assets/117726043/3ca10ab0-2e4d-4722-918f-017a347bff69)
