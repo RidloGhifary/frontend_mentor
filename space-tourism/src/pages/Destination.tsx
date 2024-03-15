@@ -42,7 +42,7 @@ const Destination = () => {
       <p className="px-7 text-sm uppercase text-white/70">
         01 <b className="ml-2 text-white">pick your destination</b>
       </p>
-      <div className="-mb-24 flex flex-col items-center justify-center p-7 md:mb-0 lg:flex-row  lg:justify-end lg:gap-10">
+      <div className="-mb-24 flex flex-col items-center justify-center p-7 md:mb-0 lg:flex-row lg:justify-end lg:gap-10">
         <img
           src={data.images.webp}
           alt={data.images.png}

@@ -16,6 +16,9 @@ export default {
           "url('/assets/destination/background-destination-tablet.jpg')",
         "dest-desktop":
           "url('/assets/destination/background-destination-desktop.jpg')",
+        "crew-mobile": "url('/assets/crew/background-crew-mobile.jpg')",
+        "crew-tablet": "url('/assets/crew/background-crew-tablet.jpg')",
+        "crew-desktop": "url('/assets/crew/background-crew-desktop.jpg')",
       },
       colors: {
         mainColor: "#cfd1ec",
