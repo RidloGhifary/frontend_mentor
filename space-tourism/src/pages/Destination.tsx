@@ -38,17 +38,17 @@ const Destination = () => {
   };
 
   return (
-    <div className="bg-dest-mobile sm:bg-dest-tablet lg:bg-dest-desktop grid min-h-[100vh] place-content-center bg-cover bg-fixed bg-center bg-no-repeat text-white lg:p-28">
-      <p className="px-7 text-sm uppercase text-white/70">
+    <div className="bg-dest-mobile sm:bg-dest-tablet lg:bg-dest-desktop grid h-[100vh] place-content-center bg-cover bg-fixed bg-center bg-no-repeat text-white lg:p-28">
+      <p className="px-7 text-sm uppercase text-white/70 lg:mt-20">
         01 <b className="ml-2 text-white">pick your destination</b>
       </p>
       <div className="-mb-24 flex flex-col items-center justify-center p-7 md:mb-0 lg:flex-row lg:justify-end lg:gap-10">
         <img
           src={data.images.webp}
           alt={data.images.png}
-          className="mb-7 mt-0 w-[50%] md:my-10 md:w-[40%] lg:w-[30%] lg:flex-1"
+          className="mb-7 mt-0 w-[50%] md:my-10 md:w-[40%] lg:w-[35%]"
         />
-        <div className="space-y-6 text-center md:w-[60%] lg:flex-1 lg:text-left">
+        <div className="space-y-6 text-center md:w-[60%] lg:text-left">
           <div className="space-x-6 uppercase">
             <button
               value="Moon"
