@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;1,200&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Light-pink: hsl(275, 100%, 97%);
+  --Grayish-purple: hsl(292, 16%, 49%);
+  --Dark-purple: hsl(292, 42%, 14%);
+  --Shit: #ad28eb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+}
+
+body {
+  background: url("./assets/images/background-pattern-desktop.svg");
+  background-position: top;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: var(--Light-pink);
+  min-height: 105vh;
+  display: grid;
+  place-items: center;
+  padding: 50px;
+}
+
+main {
+  width: 50%;
+  background-color: white;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  padding: 40px;
+  box-shadow: -4px 2px 30px -14px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: -4px 2px 30px -14px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -4px 2px 30px -14px rgba(0, 0, 0, 0.75);
+}
+
+.title-container {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.title-container .title {
+  color: var(--Dark-purple);
+  font-size: 3em;
+  font-weight: 700;
+}
+
+.qa-section {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.qa-section .q {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  color: var(--Dark-purple);
+  font-weight: 600;
+  font-size: 18px;
+  text-align: left;
+}
+
+.qa-section .q:hover {
+  color: var(--Shit);
+}
+
+.qa-section ul li {
+  list-style: none;
+}
+
+.qa-section .answer {
+  margin: 16px 0;
+  color: var(--Grayish-purple);
+  line-height: 25px;
+  font-size: 17px;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  max-height: 800px;
+  opacity: 1;
+  transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transition: all 0.25s ease-in-out;
+}
+
+.qa-section input[type="checkbox"]:not(:checked) ~ .answer {
+  margin: 10px 0 20px 0;
+  max-height: 0;
+  opacity: 0;
+  transform: translate(0, 50%);
+}
+
+input {
+  display: none;
+  z-index: -1;
+}
+
+@media screen and (max-width: 475px) {
+  body {
+    padding: 50px 20px;
+  }
+  main {
+    width: 100%;
+    padding: 20px;
+  }
+}
