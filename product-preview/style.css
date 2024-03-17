@@ -103,12 +103,6 @@ body {
   font-weight: 600;
 }
 
-@media screen and (max-width: 1075px) {
-  .content {
-    width: 85%;
-  }
-}
-
 @media screen and (max-width: 775px) {
   body {
     padding: 20px 0;
