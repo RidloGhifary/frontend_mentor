@@ -201,3 +201,27 @@ body {
   -o-border-radius: 100px;
   border: none;
 }
+
+@media screen and (max-width: 475px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .result {
+    flex: 1;
+    height: 100%;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+
+  .summary {
+    flex: 1;
+    width: 100%;
+  }
+}
