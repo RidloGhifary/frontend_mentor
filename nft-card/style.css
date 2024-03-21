@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+:root {
+  --Soft-blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+  --Very-dark-blue-mainBg: hsl(217, 54%, 11%);
+  --Very-dark-blue-cardBg: hsl(216, 50%, 16%);
+  --Very-dark-blue-line: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
+body {
+  min-height: 100dvh;
+  background-color: var(--Very-dark-blue-mainBg);
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+
+.card {
+  width: 250px;
+  background-color: var(--Very-dark-blue-cardBg);
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  padding: 14px;
+  color: var(--White);
+}
+
+.card .main-image {
+  width: 100%;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+.card .article {
+  margin-top: 20px;
+}
+
+.article .title {
+  font-size: 20px;
+}
+
+.article .desc {
+  font-size: 12px;
+  color: var(--Soft-blue);
+  margin: 16px 0;
+}
+
+.article .addition {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.eth,
+.time {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+}
+
+hr {
+  border: none;
+  border: 1px solid hsla(215, 51%, 70%, 50%);
+  margin: 20px 0;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile > img {
+  width: 35px;
+  border: 1px solid var(--White);
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+}
+
+.profile .name {
+  font-size: 12px;
+  font-weight: 200;
+}
