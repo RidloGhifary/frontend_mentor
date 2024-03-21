@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container" id="subscribe">
+      <div class="main-image"></div>
+      <div class="article">
+        <h1 class="title">Stay updated!</h1>
+        <p class="desc">
+          Join 60,000+ product managers receiving monthly updates on:
+        </p>
+        <ul class="lists">
+          <li class="list">
+            <img src="./assets/images/icon-list.svg" alt="icon-list" />Product
+            discovery and building what matters
+          </li>
+          <li class="list">
+            <img src="./assets/images/icon-list.svg" alt="icon-list" />Measuring
+            to ensure updates are a success
+          </li>
+          <li class="list">
+            <img src="./assets/images/icon-list.svg" alt="icon-list" />
+            And much more!
+          </li>
+        </ul>
+        <form>
+          <label for="email"
+            >Email address
+            <span class="email-error" id="email-error"
+              >Valid email required</span
+            >
+          </label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="email@company.com" />
+          <button onclick="isValidEmail()" type="button" class="submit">
+            Subscribe to monthly newsletter
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <section class="success" id="success-section">
+      <img src="./assets/images/icon-success.svg" alt="icon-success" />
+      <h1 class="success-title">Thanks for subscribing!</h1>
+      <p class="success-desc">
+        A confirmation email has been sent to <span id="user_email"></span>.com.
+        Please open it and click the button inside to confirm your subscription.
+      </p>
+      <button class="dismiss" onclick="handleDismiss()">Dismiss message</button>
+    </section>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
