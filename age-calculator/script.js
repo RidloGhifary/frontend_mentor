@@ -13,19 +13,13 @@ submitDate.addEventListener("click", () => {
   const yearErrorMsg = document.getElementById("year-error-msg");
   const invalidDate = document.getElementById("invalid-date");
 
-  if (isNaN(day)) {
-    dayErrorMsg.classList.remove("hidden");
-    console.log("Day field is required");
-  } else {
-    dayErrorMsg.classList.add("hidden");
-  }
+  isNaN(day)
+    ? dayErrorMsg.classList.remove("hidden")
+    : dayErrorMsg.classList.add("hidden");
 
-  if (isNaN(month)) {
-    monthErrorMsg.classList.remove("hidden");
-    console.log("Month field is required");
-  } else {
-    monthErrorMsg.classList.add("hidden");
-  }
+  isNaN(month)
+    ? monthErrorMsg.classList.remove("hidden")
+    : monthErrorMsg.classList.add("hidden");
 
   if (isNaN(year)) {
     yearErrorMsg.classList.remove("hidden");
