@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/assets/images/favicon-32x32.png" />
+    <title>Calculate Age</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              purple: "hsl(259, 100%, 65%)",
+              lightRed: "hsl(0, 100%, 67%)",
+              offWhite: "hsl(0, 0%, 94%)",
+              lightGrey: "hsl(0, 0%, 86%)",
+              smokeGrey: "hsl(0, 1%, 44%)",
+              offBlack: "hsl(0, 0%, 8%)",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-offWhite min-h-[100vh] flex justify-center items-center">
+    <main
+      class="bg-white shadow-md p-8 rounded-t-xl rounded-bl-xl rounded-br-[10rem]">
+      <section class="mr-48">
+        <form class="uppercase flex gap-5">
+          <div class="flex flex-col gap-1">
+            <label
+              for="day"
+              class="block font-bold text-smokeGrey text-xs tracking-widest"
+              >day</label
+            >
+            <input
+              type="number"
+              name="day"
+              placeholder="DD"
+              min="1"
+              max="31"
+              class="outline-none w-28 p-2 px-3 border border-lightGrey rounded-md placeholder:font-bold focus:border-purple text-xl out-of-range:border-lightRed invalid:border-lightRed" />
+            <span
+              id="day-error-msg"
+              class="hidden text-lightRed italic text-[10px] capitalize block"
+              >This field is required</span
+            >
+          </div>
+          <div class="flex flex-col gap-1">
+            <label
+              for="month"
+              class="block font-bold text-smokeGrey text-xs tracking-widest"
+              >month</label
+            >
+            <input
+              type="number"
+              name="month"
+              placeholder="MM"
+              min="1"
+              max="12"
+              class="outline-none w-28 p-2 px-3 border border-lightGrey rounded-md placeholder:font-bold focus:border-purple text-xl out-of-range:border-lightRed invalid:border-lightRed" />
+            <span
+              id="month-error-msg"
+              class="hidden text-lightRed italic text-[10px] capitalize block"
+              >This field is required</span
+            >
+          </div>
+          <div class="flex flex-col gap-1">
+            <label
+              for="year"
+              class="block font-bold text-smokeGrey text-xs tracking-widest"
+              >year</label
+            >
+            <input
+              type="number"
+              name="year"
+              placeholder="YYYY"
+              min="1"
+              max="2024"
+              class="outline-none w-28 p-2 px-3 border border-lightGrey rounded-md placeholder:font-bold focus:border-purple text-xl out-of-range:border-lightRed invalid:border-lightRed" />
+            <span
+              id="year-error-msg"
+              class="hidden text-lightRed italic text-[10px] capitalize block"
+              >This field is required</span
+            >
+          </div>
+        </form>
+        <span
+          id="invalid-date"
+          class="hidden mt-1 text-lightRed italic text-[10px] capitalize block"
+          >The date should be valid</span
+        >
+      </section>
+      <section class="flex items-center">
+        <hr class="border-[.5px] border-lightGrey w-full" />
+        <div
+          id="submitAge"
+          class="bg-purple w-auto p-4 rounded-full hover:bg-offBlack cursor-pointer transition">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="46"
+            height="44"
+            viewBox="0 0 46 44">
+            <g fill="none" stroke="#FFF" stroke-width="2">
+              <path
+                d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44" />
+            </g>
+          </svg>
+        </div>
+      </section>
+      <section>
+        <h1 class="text-7xl font-black italic">
+          <span class="text-purple not-italic" id="year-result">--</span> years
+        </h1>
+        <h1 class="text-7xl font-black italic">
+          <span class="text-purple not-italic" id="month-result">--</span>
+          months
+        </h1>
+        <h1 class="text-7xl font-black italic">
+          <span class="text-purple not-italic" id="day-result">--</span> days
+        </h1>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
