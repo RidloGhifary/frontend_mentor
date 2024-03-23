@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            custom: ['"Manrope"', "sans-serif"],
+          },
+          extend: {
+            colors: {
+              lightCyan: "hsl(193, 38%, 86%)",
+              neonGreen: "hsl(150, 100%, 66%)",
+              grayishBlue: "hsl(217, 19%, 38%)",
+              darkGrayishBlue: "hsl(217, 19%, 24%)",
+              darkBlue: "hsl(218, 23%, 16%)",
+            },
+            boxShadow: {
+              "3xl": "0px 0px 50px 0px hsl(150, 100%, 66%)",
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png" />
+    <title>Frontend Mentor | Advice generator app</title>
+  </head>
+  <body
+    class="font-custom bg-darkBlue h-[100dvh] flex justify-center items-center text-white">
+    <main
+      class="relative bg-darkGrayishBlue p-10 rounded-xl text-center space-y-6 max-w-[527px] mx-auto pb-14">
+      <h1
+        class="text-neonGreen uppercase tracking-[.3rem] text-sm font-semibold">
+        Advice <span id="advice-id">#117</span>
+      </h1>
+      <p class="text-[28px] font-semibold mb-5" id="advice">
+        "You will always regret the round of Tequila.
+      </p>
+      <div class="mx-auto flex justify-center items-center">
+        <svg width="444" height="16" xmlns="http://www.w3.org/2000/svg">
+          <g fill="none" fill-rule="evenodd">
+            <path fill="#4F5D74" d="M0 8h196v1H0zM248 8h196v1H248z" />
+            <g transform="translate(212)" fill="#CEE3E9">
+              <rect width="6" height="16" rx="3" />
+              <rect x="14" width="6" height="16" rx="3" />
+            </g>
+          </g>
+        </svg>
+      </div>
+
+      <div
+        class="absolute z-10 -bottom-[30px] left-[50%] translate-x-[-50%] cursor-pointer bg-neonGreen w-[60px] h-[60px] flex justify-center items-center rounded-full transition hover:shadow-3xl"
+        id="shuffle-advice">
+        <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M20 0H4a4.005 4.005 0 0 0-4 4v16a4.005 4.005 0 0 0 4 4h16a4.005 4.005 0 0 0 4-4V4a4.005 4.005 0 0 0-4-4ZM7.5 18a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm0-9a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm4.5 4.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm4.5 4.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm0-9a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Z"
+            fill="#202733" />
+        </svg>
+      </div>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
