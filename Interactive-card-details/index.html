@@ -39,68 +39,161 @@
       };
     </script>
     <title>Frontend Mentor | Interactive card details form</title>
+
+    <style>
+      input[type="number"]::-webkit-inner-spin-button,
+      input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    </style>
   </head>
   <body class="font-custom">
     <main class="grid grid-cols-3 min-h-[100vh] overflow-hidden">
       <div class="bg-gradientBackgroundDesk col-span-1 relative">
-        <div class="absolute z-10 h-full top-[15%]">
-          <section class="relative text-white w-full w-[80%] left-[40%]">
-            <div class="absolute top-5 left-5 flex gap-3"> 
+        <div class="absolute z-10 h-full top-[8%]">
+          <section class="relative text-white w-full w-[100%] left-[20%]">
+            <div class="absolute top-5 left-5 flex gap-3">
               <div class="w-12 h-12 rounded-full bg-white"></div>
               <div class="w-6 h-6 rounded-full border border-white mt-4"></div>
             </div>
-            <img src="./images/bg-card-front.png"alt="cardFront" class="w-[80%]"/>
-            <div class="absolute bottom-0 p-5 w-fit">
-              <p class="text-[25px] mb-3" id="card-number">0000 0000 0000 0000</p>
-              <div class="flex justify-between w-full">
-                <p class="text-xs" id="card-name">Jane Appleseed</p>
-                <p class="text-xs" id="card-exp-date">00/00 000</p>
+            <img
+              src="./images/bg-card-front.png"
+              alt="cardFront"
+              class="w-[100%]" />
+            <div class="absolute bottom-0 p-5 w-full">
+              <p class="text-[25px] mb-3" id="card-number">
+                0000 0000 0000 0000
+              </p>
+              <div
+                class="flex justify-between flex justify-between items-center">
+                <p class="text-xs" id="card-name">Your Name</p>
+                <p class="text-xs" id="card-exp-date">00/00</p>
               </div>
             </div>
           </section>
-          <section class="relative text-white mt-7 left-[50%]">
-            <img src="./images/bg-card-back.png" alt="cardBack" class="w-[80%]"/>
-            <p class="absolute left-[250px] top-[80px]" id="card-cvc">000</p>
+          <section class="relative text-white mt-7 left-[30%]">
+            <img
+              src="./images/bg-card-back.png"
+              alt="cardBack"
+              class="w-[100%]" />
+            <p class="absolute right-[60px] top-[108px]" id="card-cvc">000</p>
           </section>
         </div>
       </div>
-      <div class="col-span-2 flex justify-center items-center">
+      <div id="form" class="col-span-2 flex justify-center items-center">
         <form class="space-y-4">
           <div class="w-full space-y-2">
-            <label for="name" class="block text-xs tracking-widest">CARDHOLDER NAME</label>
-            <input type="text" name="name" id="name" placeholder="e.g. Jane Appleseed" class="w-full rounded-xl border-darkGrayishViolet focus:border-borderPurple border-1 focus:outline-none focus:ring-0 invalid:border-redError"/>
+            <label for="cardName" class="block text-xs tracking-widest"
+              >CARDHOLDER NAME</label
+            >
+            <input
+              type="text"
+              name="name"
+              id="cardName"
+              placeholder="e.g. Jane Appleseed"
+              class="w-full rounded-xl border-darkGrayishViolet focus:border-borderPurple border-1 focus:outline-none focus:ring-0 invalid:border-redError" />
           </div>
           <div class="flex flex-col space-y-2">
-            <label for="cardNumber" class="block text-xs tracking-widest">CARD NUMBER</label>
+            <label for="cardNumber" class="block text-xs tracking-widest"
+              >CARD NUMBER</label
+            >
             <input
               type="number"
               name="cardNumber"
               id="cardNumber"
-              placeholder="e.g. 1234 5678 9123 0000" class="w-full rounded-xl border-darkGrayishViolet focus:border-borderPurple border-1 focus:outline-none focus:ring-0 invalid:border-redError" />
-            <span class="text-redError text-xs ml-1">wrong format, numbers only</span>
+              placeholder="e.g. 1234 5678 9123 0000"
+              class="w-full rounded-xl border-darkGrayishViolet focus:border-borderPurple border-1 focus:outline-none focus:ring-0 invalid:border-redError" />
+            <span id="card-error-msg" class="hidden text-redError text-xs ml-1"
+              >wrong format, numbers only</span
+            >
           </div>
           <div>
             <div class="grid grid-cols-2 w-fit gap-2">
               <div class="space-y-2 w-fit">
-              <label for="mm" class="block text-xs tracking-widest uppercase">exp. date (mm/yy)</label>
+                <label class="block text-xs tracking-widest uppercase"
+                  >exp. date (mm/yy)</label
+                >
                 <div class="grid grid-cols-2 gap-2 w-fit">
-                  <input type="number" name="mm" id="mm" placeholder="MM" class="w-[100px] rounded-xl border-darkGrayishViolet focus:border-borderPurple border-1 focus:outline-none focus:ring-0 invalid:border-redError"/>
-                  <input type="number" name="mm" id="mm" placeholder="YY" class="w-[100px] rounded-xl border-darkGrayishViolet focus:border-borderPurple border-1 focus:outline-none focus:ring-0 invalid:border-redError block"/>
+                  <input
+                    type="number"
+                    name="mm"
+                    id="mm"
+                    placeholder="MM"
+                    class="w-[100px] rounded-xl border-darkGrayishViolet focus:border-borderPurple border-1 focus:outline-none focus:ring-0 invalid:border-redError" />
+                  <input
+                    type="number"
+                    name="yy"
+                    id="yy"
+                    placeholder="YY"
+                    class="w-[100px] rounded-xl border-darkGrayishViolet focus:border-borderPurple border-1 focus:outline-none focus:ring-0 invalid:border-redError block" />
                 </div>
-              <span class="text-redError text-xs ml-1">can`t be blank</span>
+                <span
+                  id="card-exp-error"
+                  class="hidden text-redError text-xs ml-1"
+                  >can`t be blank</span
+                >
               </div>
               <div class="space-y-2 w-fit">
-                <label for="cvc" class="flex flex-col text-xs tracking-widest uppercase">
+                <label
+                  for="cvc"
+                  class="flex flex-col text-xs tracking-widest uppercase">
                   cvc
                 </label>
-                <input type="number" name="cvc" id="cvc" placeholder="e.g. 123" class="w-full rounded-xl border-darkGrayishViolet focus:border-borderPurple border-1 focus:outline-none focus:ring-0 invalid:border-redError block" />
-                <span class="text-redError text-xs ml-1">can`t be blank</span>
-              </div>
+                <input
+                  type="number"
+                  name="cvc"
+                  id="cvc"
+                  placeholder="e.g. 123"
+                  class="w-full rounded-xl border-darkGrayishViolet focus:border-borderPurple border-1 focus:outline-none focus:ring-0 invalid:border-redError block" />
+                <span
+                  id="card-cvc-error"
+                  class="hidden text-redError text-xs ml-1"
+                  >can`t be blank</span
+                >
               </div>
             </div>
-            <input type="submit" value="Confirm" id="submit" class="bg-veryDarkViolet text-white rounded-lg w-full p-3 cursor-pointer"/>
           </div>
+          <input
+            type="submit"
+            disabled
+            value="Confirm"
+            id="submit"
+            class="bg-veryDarkViolet text-white rounded-lg w-full p-3 cursor-pointer disabled:bg-darkGrayishViolet disabled:text-black" />
         </form>
+      </div>
+      <div
+        id="complete"
+        class="hidden space-y-5 text-center col-span-2 flex flex-col justify-center items-center">
+        <div class="mx-auto flex justify-center items-center">
+          <svg
+            width="80"
+            height="80"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <circle cx="40" cy="40" r="40" fill="url(#a)" />
+            <path d="M28 39.92 36.08 48l16-16" stroke="#fff" stroke-width="3" />
+            <defs>
+              <linearGradient
+                id="a"
+                x1="-23.014"
+                y1="11.507"
+                x2="0"
+                y2="91.507"
+                gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6348FE" />
+                <stop offset="1" stop-color="#610595" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <h1 class="uppercase tracking-widest text-3xl">thank you!</h1>
+        <p>We`ve added your card details</p>
+        <button
+          id="button-complete"
+          class="border-none bg-veryDarkViolet text-white p-3 rounded-lg cursor-pointer w-[50%]">
+          Continue
+        </button>
       </div>
     </main>
 
