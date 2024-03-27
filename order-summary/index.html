@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png" />
+    <title>Frontend Mentor | Order summary card</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            custom: ['"Red Hat Display"', "sans-serif"],
+          },
+          screens: {
+            mobile: "375px",
+            laptop: "1024px",
+          },
+          extend: {
+            colors: {
+              paleBlue: "hsl(225, 100%, 94%)",
+              brightBlue: "hsl(245, 75%, 52%)",
+              veryPaleBlue: "hsl(225, 100%, 98%)",
+              desaturatedBlue: "hsl(224, 23%, 55%)",
+              darkBlue: "hsl(223, 47%, 23%)",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="font-custom bg-paleBlue h-[100dvh] flex justify-center items-center p-3">
+    <img
+      src="./images/pattern-background-desktop.svg"
+      alt="background"
+      class="absolute -z-10 top-0 object-cover object-center hidden mobile:block" />
+    <img
+      src="./images/pattern-background-mobile.svg"
+      alt="background"
+      class="absolute -z-10 top-0 object-cover object-center mobile:hidden" />
+
+    <main class="bg-veryPaleBlue w-fit rounded-2xl overflow-hidden shadow-lg">
+      <img src="./images/illustration-hero.svg" alt="illustration-hero" />
+      <section class="p-10 max-w-[420px] mx-auto text-center">
+        <h1 class="text-darkBlue font-bold text-3xl">Order Summary</h1>
+        <p class="text-desaturatedBlue my-7 text-sm">
+          You can now listen to millions of songs, audiobooks, and podcasts on
+          any device anywhere you like!
+        </p>
+        <div class="flex items-center gap-3">
+          <img src="./images/icon-music.svg" alt="music" />
+          <div class="flex flex-col gap-[1px]">
+            <p class="text-darkBlue font-bold">Annual Plan</p>
+            <p class="text-desaturatedBlue">$59.99/year</p>
+          </div>
+          <p class="ml-auto text-brightBlue font-semibold underline">Change</p>
+        </div>
+        <button
+          class="block my-8 w-full text-center bg-brightBlue text-white rounded-lg py-3 font-semibold shadow-2xl">
+          Proceed to Payment
+        </button>
+        <button class="font-semibold text-desaturatedBlue">Cancel Order</button>
+      </section>
+    </main>
+  </body>
+</html>
