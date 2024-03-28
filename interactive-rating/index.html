@@ -25,31 +25,95 @@
           extend: {
             colors: {
               orange: "hsl(25, 97%, 53%)",
+              white: "hsl(0, 0%, 100%)",
               lightGrey: "hsl(217, 12%, 63%)",
               mediumGrey: "hsl(216, 12%, 54%)",
               darkBlue: "hsl(213, 19%, 18%)",
-              varyDarkBlue: "hsl(216, 12%, 8)",
+              veryDarkBlue: "hsl(216, 12%, 8)",
             },
           },
         },
       };
     </script>
   </head>
-  <body>
-    <!-- Rating state start -->
+  <body
+    class="font-custom bg-veryDarkBlue min-h-[100dvh] text-white flex justify-center items-center">
+    <main
+      id="rating-sec"
+      class="max-w-[370px] bg-darkBlue rounded-2xl p-5 bg-[#171e28]">
+      <div
+        class="p-3 rounded-full bg-gray-700 flex justify-center items-center w-fit mb-8">
+        <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="m9.067.43 1.99 4.031c.112.228.33.386.58.422l4.45.647a.772.772 0 0 1 .427 1.316l-3.22 3.138a.773.773 0 0 0-.222.683l.76 4.431a.772.772 0 0 1-1.12.813l-3.98-2.092a.773.773 0 0 0-.718 0l-3.98 2.092a.772.772 0 0 1-1.119-.813l.76-4.431a.77.77 0 0 0-.222-.683L.233 6.846A.772.772 0 0 1 .661 5.53l4.449-.647a.772.772 0 0 0 .58-.422L7.68.43a.774.774 0 0 1 1.387 0Z"
+            fill="#FC7614" />
+        </svg>
+      </div>
+      <h1 class="text-3xl font-bold">How did we do?</h1>
+      <p class="text-lightGrey text-sm my-4">
+        Please let us know how we did with your support request. All feedback is
+        appreciated to help us improve our offering!
+      </p>
+      <div class="my-7">
+        <ul class="flex justify-around items-center">
+          <li
+            id="list"
+            class="rounded-full bg-darkBlue bg-gray-700 w-10 h-10 flex justify-center items-center cursor-pointer text-lightGrey transition hover:bg-orange hover:text-white">
+            <label>1</label>
+            <input type="radio" id="1" name="rating" class="hidden" />
+          </li>
+          <li
+            id="list"
+            class="rounded-full bg-darkBlue bg-gray-700 w-10 h-10 flex justify-center items-center cursor-pointer text-lightGrey transition hover:bg-orange hover:text-white">
+            <label>2</label>
+            <input type="radio" id="2" name="rating" class="hidden" />
+          </li>
+          <li
+            id="list"
+            class="rounded-full bg-darkBlue bg-gray-700 w-10 h-10 flex justify-center items-center cursor-pointer text-lightGrey transition hover:bg-orange hover:text-white">
+            <label>3</label>
+            <input type="radio" id="3" name="rating" class="hidden" />
+          </li>
+          <li
+            id="list"
+            class="rounded-full bg-darkBlue bg-gray-700 w-10 h-10 flex justify-center items-center cursor-pointer text-lightGrey transition hover:bg-orange hover:text-white">
+            <label>4</label>
+            <input type="radio" id="4" name="rating" class="hidden" />
+          </li>
+          <li
+            id="list"
+            class="rounded-full bg-darkBlue bg-gray-700 w-10 h-10 flex justify-center items-center cursor-pointer text-lightGrey transition hover:bg-orange hover:text-white">
+            <label>5</label>
+            <input type="radio" id="5" name="rating" class="hidden" />
+          </li>
+        </ul>
+      </div>
+      <button
+        id="submit"
+        class="w-full text-center bg-orange rounded-full py-3 uppercase text-sm tracking-widest transition hover:bg-white hover:text-orange outline-none ring-0 border-none">
+        Submit
+      </button>
+    </main>
 
-    How did we do? Please let us know how we did with your support request. All
-    feedback is appreciated to help us improve our offering! 1 2 3 4 5 Submit
-
-    <!-- Rating state end -->
-
-    <!-- Thank you state start -->
-
-    You selected
-    <!-- Add rating here -->
-    out of 5 Thank you! We appreciate you taking the time to give a rating. If
-    you ever need more support, don’t hesitate to get in touch!
-
-    <!-- Thank you state end -->
+    <section
+      id="thanks"
+      class="hidden max-w-[370px] bg-darkBlue rounded-2xl p-8 bg-[#171e28]">
+      <img
+        src="./images/illustration-thank-you.svg"
+        alt="thank you"
+        class="mx-auto" />
+      <article class="text-center">
+        <p
+          class="my-5 bg-darkBlue text-orange rounded-full py-1 px-3 w-fit mx-auto">
+          You selected <span id="user-choose"></span> out of 5
+        </p>
+        <h1 class="text-2xl">Thank You!</h1>
+        <p class="text-mediumGrey mt-3 text-sm">
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don’t hesitate to get in touch!
+        </p>
+      </article>
+    </section>
+    <script src="./script.js"></script>
   </body>
 </html>
